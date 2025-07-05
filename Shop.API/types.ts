@@ -44,6 +44,8 @@ export interface ProductAddImagesPayload {
 
 export type ImagesRemovePayload = string[];
 
+// Исправленный интерфейс с добавлением password_hash
 export interface IUserRequisitesEntity extends IAuthRequisites, RowDataPacket {
   id: number;
+  password_hash: string; // Добавляем поле для хеша пароля
 }

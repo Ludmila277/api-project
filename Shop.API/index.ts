@@ -9,7 +9,7 @@ export let connection: Connection;
 export default function (dbConnection: Connection): Express {
   const app = express();
   app.use(express.json());
-
+  app.use(express.static("img"));
   connection = dbConnection;
 
   app.use("/comments", commentsRouter);

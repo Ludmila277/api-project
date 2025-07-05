@@ -12,6 +12,9 @@ export async function initDataBase(): Promise<Connection | null> {
       password: DB_PASSWORD,
       user: DB_USER,
       database: DB_NAME,
+      authPlugins: {
+        mysql_clear_password: () => () => Buffer.from(DB_PASSWORD || ""),
+      },
     });
   } catch (e: any) {
     console.error(e.message || e);
@@ -19,6 +22,5 @@ export async function initDataBase(): Promise<Connection | null> {
   }
 
   console.log(`Connection to DB ${DB_NAME} established`);
-
   return connection;
 }
