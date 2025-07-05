@@ -1,0 +1,14 @@
+{
+  "name": "shop.admin",
+  "version": "1.0.0",
+  "license": "ISC",
+  "author": "Demidova L.D.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^1.10.0",
+    "express": "^5.1.0",
+    "express-ejs-layouts": "^2.5.1"
+  }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SHOP PROJECT</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/roboto" />
+    <link
+      rel="stylesheet"
+      href="/<%= process.env.ADMIN_PATH %>/css/style.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo"></div>
+
+      <div>
+        <img
+          src="/<%= process.env.ADMIN_PATH %>/img/admin.png"
+          alt="Admin Logo"
+          class="logo-image"
+        />
+      </div>
+    </header>
+    <div class="container"><%- body %></div>
+  </body>
+</html>
